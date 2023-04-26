@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Password</title>
+    <script>
+      var status = '<%- JSON.stringify(status) %>';
+
+      if (JSON.parse(status) == "verified") {
+        if (confirm("Do u want to login?")) {
+          window.location.href = "http://localhost:3000/login";
+        }else{
+					window.location.href = "http://localhost:3000/"
+				}
+      }
+    </script>
+
+  </head>
+  <body>
+		<style>
+			.container{
+				background-color: rgb(21, 86, 207);
+				width: 80%;
+				margin: auto;
+				padding: 20px;
+				color: #fff;
+				text-align: center;
+			}
+			.btn{
+				border: none;
+				background-color: coral;
+				color: #fff;
+				padding: 10px;
+				margin-top: 10px;
+
+			}
+			.btn:hover{
+				cursor: pointer;
+			}
+		</style>
+		<div class="container">
+			<h2>Reset your password</h2>
+			<form action="" method="post">
+				<input
+					type="password"
+					name="password"
+					id="password"
+					placeholder="password"
+				/><br />
+
+				<input class="btn" type="submit" value="submit" />
+			</form>
+		</div>
+
+  </body>
+</html>
